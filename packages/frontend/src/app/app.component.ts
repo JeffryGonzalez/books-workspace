@@ -1,21 +1,37 @@
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AsyncPipe, JsonPipe],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-    <pre>{{books | async | json}}</pre>
-    <router-outlet />
+    <div class="flex gap-4 m-8">
+      <a
+        class="btn btn-primary"
+        [routerLinkActive]="['btn-accent']"
+        routerLink="/home"
+        >Home</a
+      >
+      <a
+        class="btn btn-primary"
+        [routerLinkActive]="['btn-accent']"
+        routerLink="/books"
+        >Book List</a
+      >
+      <a
+        class="btn btn-primary"
+        [routerLinkActive]="['btn-accent']"
+        routerLink="/add-book"
+        >Add Book</a
+      >
+    </div>
+    <main class="container mx-auto pt-12">
+      <router-outlet />
+    </main>
   `,
   styles: [],
 })
-export class AppComponent {
-  #client = inject(HttpClient);
-  books = this.#client.get('/api/books');
-  title = 'frontend';
-}
+export class AppComponent {}

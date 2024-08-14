@@ -1,5 +1,5 @@
 {
-    "files.associations": {
+  "files.associations": {
     "*.css": "tailwindcss"
   },
 
@@ -14,5 +14,6 @@
   "eslint.codeActionsOnSave.mode": "all",
   "editor.formatOnSave": true,
   "workbench.tree.indent": 19,
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
