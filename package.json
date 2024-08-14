@@ -9,7 +9,8 @@
   },
   "workspaces": [
     "packages/books-api",
-    "packages/frontend"
+    "packages/frontend",
+    "packages/shared-types"
   ],
   "keywords": [],
   "author": "",

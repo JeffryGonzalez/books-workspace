@@ -10,7 +10,9 @@
     "nitropack": "latest"
   },
   "dependencies": {
+    "frontend": "^0.0.0",
     "generic-pool": "^3.9.0",
-    "ts-postgres": "^2.0.4"
+    "ts-postgres": "^2.0.4",
+    "shared-types": "*"
   }
 }
